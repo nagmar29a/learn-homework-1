@@ -15,11 +15,17 @@
 """
 
 def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
+    if person_age > 0 and person_age < 7:
+      return('Иди в детский садик')
+    if person_age >= 7 and person_age < 17:
+      return('Учись в школе')
+    if person_age >= 17 and person_age < 23:
+      return('Учись в институте')
+    else:
+      return('ИДИ РАБОТАЙ')
 
 if __name__ == "__main__":
-    main()
+    person_age = (int(input('Ваш возраст? ')))
+    person_age = abs(person_age)
+    what_does_a_person = main()
+    print(what_does_a_person)
